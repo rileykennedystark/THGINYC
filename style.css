@@ -1,0 +1,383 @@
+.press-start-2p-regular {
+  font-family: "Press Start 2P", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Set the overall background and center the content */
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 20px; /* Added padding for smaller screens */
+  font-family: "Press Start 2P", serif;
+}
+
+.left-body{
+  align-items: left;
+}
+
+/* Style for the pink headers */
+.pink-header {
+  font-family: "Press Start 2P";
+  color: #E040D0;
+  text-align: center;
+  line-height: 30px;
+  width: 80%;
+  margin: 0px 0px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.yellow-header {
+  font-family: "Press Start 2P";
+  color: yellow;
+  padding: 20px;
+  text-align: center;
+  line-height: 50px;
+  width: 80%;
+  margin: 10px 0;
+  text-shadow: 4px 4px 0px #E040D0;
+}
+
+.script-header {
+  font-family: "Press Start 2P";
+  color: white;
+  text-align: left;
+  line-height: 0px;
+  width: 80%;
+}
+
+.script-body {
+  font-family: "Press Start 2P";
+  color: #E040D0;
+  text-align: left;
+  line-height: 20px;
+  font-size: 12px;
+  width: 80%;
+  margin: 1px;
+  word-wrap: break-word;
+}
+
+.white-box-text{
+  display: inline-block;
+  font-family: "Press Start 2P";
+  background-color: white;
+  font-size: 10px;
+  padding: 24px 16px;
+  border-radius: 8px;
+  line-height: 0px;
+}
+
+/* Style for the yellow button with a pink border */
+.yellow-button {
+  background-color: yellow;
+  font-family: "Press Start 2P";
+  color: #E040D0;
+  border: 4px solid #E040D0;
+  padding: 20px 30px;
+  border-radius: 4px;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.icon-row {
+  display: flex;
+  flex-wrap: wrap;         /* Allows icons to wrap onto multiple lines */
+  justify-content: center; /* Centers icons horizontally, even on wrap */
+  align-items: center;     /* Vertically center icons in each row */
+  gap: 120px;               /* Spacing between icons */
+  margin-top: 50px;
+}
+
+/* Icon and label styles */
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Icon Image */
+.icon-image {
+  width: 64px; /* Adjust icon size as needed */
+  height: 64px;
+  cursor: pointer;
+}
+
+.icon-label {
+  margin-top: 16px;
+  font-size: 1em;
+  color: yellow;
+  font-family: "Press Start 2P", serif;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.icon:hover .icon-label{
+  color:white;
+}
+
+.leaderboard-header {
+  text-align: center;
+  flex-direction: column;
+  margin-top: 0px; /* Space from top of page */
+}
+
+.yellow-header {
+  color: yellow;
+  font-size: 2rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.pink-header {
+  color: #E040D0; /* Pink color */
+  margin: 0;
+  line-height: 1.2;
+  font-size: 1rem;
+  padding: 0;
+}
+
+.leaderboard-box {
+  background-color: black;
+  border: 4px solid #E040D0;
+  width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.scoreboard-title {
+  display: block;
+  width: 100%;
+  margin: 0 0 20px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/***********************************************************
+  LEADERBOARD TABLE
+************************************************************/
+.scoreboard-table {
+  display: table;
+  width: 100%;
+  border-spacing: 0;
+}
+
+/* We set position: relative on the row to anchor the tooltip */
+.scoreboard-row {
+  display: table-row;
+  position: relative;
+}
+
+/* Header row styling */
+.scoreboard-header .scoreboard-cell {
+  font-weight: bold;
+  color: yellow;
+}
+
+/* Each cell in the scoreboard */
+.scoreboard-cell {
+  display: table-cell;
+  padding: 12px 12px;
+  color: #E040D0;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+/***********************************************************
+  TOOLTIP ON HOVER
+************************************************************/
+.scoreboard-row[data-tooltip]:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -50px;  /* Adjust vertical position as needed */
+  left: 50%;
+  z-index: 999;
+  transform: translateX(-50%);
+  background: #00F;
+  color: #FFF;
+  padding: 12px 12px;
+  border-radius: 4px;
+  font-size: 1rem;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.name-link:hover{
+color: white;
+text-decoration: underline;
+cursor: pointer;
+}
+
+.scoreboard-footer {
+  margin-top: 20px;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/***********************************************************
+  GALLERY
+************************************************************/
+
+/* Gallery Title */
+    .gallery-title {
+      color: #E040D0; /* Pink color */
+      font-size: 2rem;
+      margin-bottom: 40px; /* Space below the title */
+      text-transform: uppercase;
+    }
+
+    /* White box for the image placeholder */
+    .gallery-item {
+      background-color: white;
+      width: 80%;
+      max-width: 400px;    /* Constrain the box width on large screens */
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px; /* Space below each box */
+      color: black;
+      text-align: center;
+    }
+
+    /* Pink caption below each box */
+    .gallery-caption {
+      color: #E040D0;      /* Pink */
+      margin-bottom: 40px; /* Space before next item */
+      text-align: center;
+      font-size: 1rem;
+    }
+
+
+
+/* Banner container: full width with hidden overflow */
+.banner {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: yellow;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Marquee wrapper: apply the scrolling animation */
+.marquee {
+  display: inline-block;
+  /* Ensure the marquee is wide enough for seamless looping */
+  width: 100%;
+  animation: marquee 10s linear infinite;
+}
+
+/* Styling for the repeated text */
+.marquee__content {
+  display: inline-block;
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 2rem;
+  padding: 20px;
+  color: #E040D0;
+}
+
+/* Keyframes for continuous leftward scrolling */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-150%);
+  }
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 600px) {
+
+
+/* Make scoreboard box stretch across most of the screen */
+  .leaderboard-box {
+    max-width: 70%;
+    margin: 20px auto;
+    padding: 10px;
+  }
+
+  .leaderboard-header{
+    margin-top: 100px;
+  }
+
+  /* Increase title size if desired, or keep it smaller for fitting */
+  .scoreboard-title {
+    font-size: 3rem;  /* Bigger heading on mobile, if you like */
+  }
+
+  /* Let cells wrap text and optionally increase font size for readability */
+  .scoreboard-cell {
+    font-size: .8rem;  
+    white-space: normal; /* ALLOW WRAPPING on mobile */
+    word-wrap: break-word; /* In case of very long text */
+    padding: 8px;
+    line-height: 1.2rem;
+  }
+
+  /* Optional: Make the tooltip text smaller or bigger */
+  .scoreboard-row[data-tooltip]:hover::after {
+    font-size: 1rem; /* Adjust as needed */
+  }
+
+  .pink-header {
+    padding: 4px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .yellow-button {
+    padding: 15px 25px;
+    font-size: 20px;
+  }
+
+  .icon-row{
+    gap: 50px;
+  }
+
+  .marquee__content {
+  font-size: 1.5rem;
+}
+
+.script-header {
+  text-align: center;
+  font-size: 16px;
+}
+
+.script-body {
+  line-height: 16px;
+  text-align: center;
+  font-size: 12px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-400%);
+    }
+  }
+}
