@@ -198,7 +198,9 @@ header {
   vertical-align: middle;
   text-align: center;
   font-size: 1rem;
-  white-space: nowrap;
+  line-height: 24px;
+  white-space: normal; /* ALLOW WRAPPING*/
+  word-wrap: break-word; /* In case of very long text */
 }
 
 /***********************************************************
