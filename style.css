@@ -18,7 +18,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  padding: 0 20px; /* padding for smaller screens */
+  padding: 0 20px;
   font-family: "Press Start 2P", serif;
 }
 
@@ -110,14 +110,14 @@ header {
 }
 
 .icon-image {
-  width: 64px;
-  height: 64px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
 }
 
 .icon-label {
   margin-top: 16px;
-  font-size: 1em;
+  font-size: .8em;
   color: yellow;
   font-family: "Press Start 2P", serif;
 }
@@ -134,7 +134,7 @@ header {
 .leaderboard-header {
   text-align: center;
   flex-direction: column;
-  margin-top: 0px; /* Space from top of page */
+  margin-top: 0px;
 }
 
 .yellow-header {
@@ -148,9 +148,63 @@ header {
   color: #E040D0; /* Pink */
   margin: 0;
   line-height: 1.2;
-  font-size: 1rem;
+  font-size: 30px;
   padding: 0;
 }
+
+.underbelly{
+  font-size: 32px;
+  padding: 20px 0px;
+}
+
+.tiny-copyright {
+  position: fixed;
+  box-sizing: border-box;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 8px;
+  color: white;
+  text-align: center;
+  line-height: 16px;
+  padding: 20px 15px;
+  font-family: "Press Start 2P", sans-serif;
+  z-index: 1000;
+}
+
+
+/***********************************************************
+  AUDIO
+************************************************************/
+
+.audio-player {
+  position: fixed;
+  top: 100px;
+  right: 40px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.audio-player img {
+  width: 40px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.audio-player:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.audio-player:hover .icon-label{
+  color:white;
+}
+
+/***********************************************************
+  LEADERBOARD
+************************************************************/
 
 .leaderboard-box {
   background-color: black;
@@ -169,16 +223,12 @@ header {
   font-size: 1.2rem;
 }
 
-/***********************************************************
-  LEADERBOARD TABLE
-************************************************************/
 .scoreboard-table {
   display: table;
   width: 100%;
   border-spacing: 0;
 }
 
-/* We set position: relative on the row to anchor the tooltip */
 .scoreboard-row {
   display: table-row;
   position: relative;
@@ -199,8 +249,8 @@ header {
   text-align: center;
   font-size: 1rem;
   line-height: 24px;
-  white-space: normal; /* ALLOW WRAPPING*/
-  word-wrap: break-word; /* In case of very long text */
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 /***********************************************************
@@ -210,7 +260,7 @@ header {
 .scoreboard-row[data-tooltip]:hover::after {
   content: attr(data-tooltip);
   position: absolute;
-  bottom: -50px;  /* Adjust vertical position as needed */
+  bottom: -50px;
   left: 50%;
   z-index: 999;
   transform: translateX(-50%);
@@ -251,7 +301,7 @@ cursor: pointer;
     .gallery-item {
       background-color: white;
       width: 80%;
-      max-width: 400px; /* Constrain width on large screens */
+      max-width: 400px;
       height: 300px;
       display: flex;
       justify-content: center;
@@ -279,10 +329,10 @@ cursor: pointer;
   white-space: nowrap;
 }
 
-/* Marquee wrapper: scrolling animation */
+/* Marquee is da scrolling animation */
 .marquee {
   display: inline-block;
-  /* Ensure the marquee is wide enough for seamless looping */
+  /* Make sure ze marquee is wide enough for seamless looping */
   width: 100%;
   animation: marquee 10s linear infinite;
 }
@@ -302,15 +352,17 @@ cursor: pointer;
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-150%);
+    transform: translateX(-50%);
   }
 }
 
-/* Responsive adjustments for mobile devices */
+
+/***********************************************************
+  MOBILE
+************************************************************/
+
 @media (max-width: 600px) {
 
-
-/* scoreboard box*/
   .leaderboard-box {
     max-width: 70%;
     margin: 20px auto;
@@ -328,22 +380,33 @@ cursor: pointer;
 
   .scoreboard-cell {
     font-size: .8rem;  
-    white-space: normal; /* ALLOW WRAPPING on mobile */
-    word-wrap: break-word; /* In case of very long text */
+    white-space: normal;
+    word-wrap: break-word;
     padding: 8px;
     line-height: 1.2rem;
   }
 
   /* tooltip text size */
   .scoreboard-row[data-tooltip]:hover::after {
-    font-size: 1rem; /* Adjust as needed */
+    font-size: 1rem;
   }
+
+  .underbelly{
+  font-size: 30px;
+  line-height: 1.6;
+  padding: 20px 0px;
+}
+
+.underbelly-body{
+  padding: 20px 0px;
+}
 
   .pink-header {
     padding: 4px;
-    font-size: 16px;
     line-height: 1.6;
   }
+
+
   .yellow-button {
     padding: 15px 25px;
     font-size: 20px;
@@ -352,6 +415,15 @@ cursor: pointer;
   .icon-row{
     gap: 50px;
   }
+
+  .audio-player {
+  position: fixed;
+  top: 300px;
+  right: 40px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 10000;
+}
 
   .marquee__content {
   font-size: 1.5rem;
@@ -373,7 +445,7 @@ cursor: pointer;
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-400%);
+    transform: translateX(-120%);
     }
   }
 }

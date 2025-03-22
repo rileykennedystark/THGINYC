@@ -9,26 +9,75 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- today's date -->
+  <div class="banner" style="padding: 20px;">
+<marquee behavior="scroll" loop="-1" width="100%">
+  <script>
+    var today = new Date();
+
+    // Map month indices to month names ya feel
+    var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+    // Get day + mnth from 'today'
+    var day = today.getDate();
+    var month = today.getMonth();
+
+    // Handle hours/minutes for a 12-hour clock with am/pm type shit
+    var hours = today.getHours();
+    var minutes = today.getMinutes();
+    var suffix = (hours >= 12) ? "pm" : "am";
+    var hours12 = hours % 12 || 12; // OOPS chave to onvert 0 to 12 for midnight/noon
+
+    // cut '0' if minutes < 10
+    if (minutes < 10) {
+      minutes = "0" + minutes;
+    }
+
+    // Show text: "Today's Date: blah blah, 1982, beep boop"
+    var displayString = hours12 + ":" + minutes + suffix + ", " + monthNames[month] + " " + day + ", " + "1981";
+
+    // Write text in marquee
+    document.write(displayString);
+  </script>
+</marquee>
+</div>
+
   <header>
   <h1 class="yellow-header">THE HORNIEST GIRLS IN NEW YORK CITY</h1>
   </header>
 
-   <!-- Marquee -->
-  <div class="banner">
-    <!-- First marquee line -->
-    <div class="marquee">
-      <span class="marquee__content">
-         THE HORNIEST GIRLS IN NEW YORK CITY. THE HORNIEST GIRLS IN NEW YORK CITY. THE HORNIEST GIRLS IN NEW YORK CITY. THE HORNIEST GIRLS IN NEW YORK CITY. THE HORNIEST GIRLS IN NEW YORK CITY. THE HORNIEST GIRLS IN NEW YORK CITY. THE HORNIEST GIRLS IN NEW YORK CITY. THE HORNIEST GIRLS IN NEW YORK CITY. THE HORNIEST GIRLS IN NEW YORK CITY. THE HORNIEST GIRLS IN NEW YORK CITY. THE HORNIEST GIRLS IN NEW YORK CITY. THE HORNIEST GIRLS IN NEW YORK CITY. THE HORNIEST GIRLS IN NEW YORK CITY. THE HORNIEST GIRLS IN NEW YORK CITY. THE HORNIEST GIRLS IN NEW YORK CITY. THE HORNIEST GIRLS IN NEW YORK CITY. 
-      </span>
+<!-- Fixed audio player icon -->
+<div class="audio-player" onclick="playBust()" style="margin-bottom: 40px;">
+        <img src="icons/disk.png" alt="photo" class="icon-image">
+      <div class="icon-label">BUST A MOVE</div>
     </div>
   </div>
-  
+
+
+<!-- Hidden audio element -->
+<audio id="bustAudio" src="audio/bust.mp3"></audio>
+
+<script>
+  function playBust() {
+    var audio = document.getElementById('bustAudio');
+    // If paused, play; if already playing, restart.
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.currentTime = 0;
+      audio.play();
+    }
+  }
+</script>
+
+
   <main>
 
      <!-- Icon 1 -->
   <div class="icon-row">
     <!-- Icon 1 -->
-    <div class="icon" onclick="window.location.href='underbelly.html'">
+    <div class="icon"  style="margin-bottom: 180px;" onclick="window.location.href='underbelly.html'">
       <!-- Link wrapping the icon image -->
       <a href="#welcome">
         <img src="icons/smile.png" alt="smile" class="icon-image">
@@ -37,7 +86,7 @@
     </div>
 
     <!-- Icon 2 -->
-    <div class="icon" onclick="window.location.href='script.html'">
+    <div class="icon" style="margin-top: 120px;" onclick="window.location.href='script.html'">
       <a href="#script">
         <img src="icons/script.png" alt="Icon 2" class="icon-image">
       </a>
@@ -45,7 +94,7 @@
     </div>
 
     <!-- Icon 3 -->
-    <div class="icon" onclick="window.location.href='about.html'">
+    <div class="icon " style="margin-bottom: 30px;" onclick="window.location.href='about.html'">
       <a href="#info">
         <img src="icons/info.png" alt="info" class="icon-image">
       </a>
@@ -53,7 +102,7 @@
     </div>
 
     <!-- Icon 4 -->
-    <div class="icon" onclick="window.location.href='leaderboard.html'">
+    <div class="icon" style="margin-bottom: 140px;" onclick="window.location.href='leaderboard.html'">
       <a href="#leaderboard">
         <img src="icons/microphone.png" alt="microphone" class="icon-image">
       </a>
@@ -61,13 +110,17 @@
     </div>
 
     <!-- Icon 5 -->
-    <div class="icon" onclick="window.location.href='gallery.html'">
+    <div class="icon" style="margin-bottom: 40px;" onclick="window.location.href='gallery.html'">
       <a href="#gallery">
         <img src="icons/photo.png" alt="photo" class="icon-image">
       </a>
       <div class="icon-label">PHOTOS</div>
     </div>
   </div>
+
+<footer class="tiny-copyright">
+  © 2025 TOONIEROONIE PRODUCTIONS. ALL RIGHTS RESERVED TO RILEY KENNEDY STARK AND TESS LANCASTER: THE HORNIEST GIRLS IN NEW YORK CITY.
+</footer>
  
   </main>
 </body>
