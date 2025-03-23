@@ -388,7 +388,7 @@ cursor: pointer;
 
   /* tooltip text size */
   .scoreboard-row[data-tooltip]:hover::after {
-    font-size: 1rem;
+    display: none; /* Hide the element on mobile */
   }
 
   .underbelly{
