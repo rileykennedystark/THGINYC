@@ -1,4 +1,5 @@
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<script type="module" src="https://esm.sh/@stefanjudis/sparkly-text"></script>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -44,7 +45,7 @@
 </div>
 
   <header>
-  <h1 class="yellow-header" style="padding:10px;">THE HORNIEST GIRLS IN NEW YORK CITY</h1>
+  <sparkly-text number-of-sparkles="4" class="yellow-header underbelly" style="--sparkly-text-size: 3em; --sparkly-text-color: #FF70BF;"> – THE HORNIEST GIRLS IN NEW YORK CITY</sparkly-text>
   </header>
 
 
@@ -86,16 +87,18 @@
       <div class="icon-label">LEADERBOARD</div>
     </div>
 
-    <!-- Icon 5 -->
-    <div class="icon" style="margin-bottom: 30px;" onclick="window.location.href='gallery.html'">
+<!-- GALLERY: uncomment below to add back gallery (highlight it and do Command + '/') -->
+
+<!--<div class="icon" style="margin-bottom: 30px;" onclick="window.location.href='gallery.html'">
       <a href="#gallery">
         <img src="icons/photo.png" alt="photo" class="icon-image">
       </a>
       <div class="icon-label">PHOTOS</div>
-    </div>
+</div> -->
+
 
     <!-- Bust a move icon -->
-<div class="icon" onclick="playBust()" style="margin-bottom: 10px;">
+<div class="icon" onclick="playBust()" style="margin-bottom: 20px;">
         <img src="icons/disk.png" alt="photo" class="icon-image">
       <div class="icon-label">BUST A MOVE</div>
     </div>
