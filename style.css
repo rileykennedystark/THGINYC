@@ -134,7 +134,7 @@ header {
 .leaderboard-header {
   text-align: center;
   flex-direction: column;
-  margin-top: 0px;
+  margin-top: 200px; /* Decrease by 10px for each entry on leaderboard and vice versa */
 }
 
 .yellow-header {
@@ -370,7 +370,7 @@ cursor: pointer;
   }
 
   .leaderboard-header{
-    margin-top: 100px;
+    margin-top: 120px; /* Decrease by 10px for each entry on leaderboard and vice versa */
   }
 
 
@@ -409,6 +409,7 @@ cursor: pointer;
 
   .yellow-button {
     padding: 15px 25px;
+    margin-bottom: 20px;
     font-size: 20px;
   }
 
