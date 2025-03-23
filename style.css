@@ -325,7 +325,6 @@ cursor: pointer;
   position: fixed;
   top: 0;
   color: white;
-/*  background-color: yellow;*/
   overflow: hidden;
   white-space: nowrap;
 }
@@ -393,9 +392,9 @@ cursor: pointer;
   }
 
   .underbelly{
-  font-size: 30px;
+  font-size: 1.2rem;
   line-height: 1.6;
-  padding: 20px 0px;
+  padding: 10px 0px;
 }
 
 .underbelly-body{
