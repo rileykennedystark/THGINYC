@@ -72,14 +72,16 @@ header {
   word-wrap: break-word;
 }
 
-.white-box-text{
+.white-box-text {
   display: inline-block;
   font-family: "Press Start 2P";
   background-color: white;
   font-size: 10px;
   padding: 24px 16px;
   border-radius: 8px;
-  line-height: 0px;
+  line-height: 18px;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 .yellow-button {
