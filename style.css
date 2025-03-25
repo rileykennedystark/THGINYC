@@ -276,17 +276,19 @@ header {
 .scoreboard-row[data-tooltip]:hover::after {
   content: attr(data-tooltip);
   position: absolute;
-  bottom: -50px;
+  bottom: -100px;
   left: 50%;
   z-index: 1000;
   transform: translateX(-50%);
-  background: #00F;
+  background: black;
   color: #FFF;
   padding: 12px 12px;
   border-radius: 4px;
   font-size: 1rem;
-  white-space: nowrap;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  width: 800px;
+  line-height: 25px;
+/*  white-space: nowrap;*/
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 .name-link:hover{
