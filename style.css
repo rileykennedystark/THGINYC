@@ -104,7 +104,7 @@ header {
   justify-content: center;
   align-items: center;
   gap: 120px;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .icon {
@@ -199,7 +199,7 @@ header {
   right: 40px;
   text-align: center;
   cursor: pointer;
-  z-index: 10000;
+  z-index: 1000;
 }
 
 .audio-player img {
@@ -225,7 +225,7 @@ header {
 .leaderboard-box {
   background-color: black;
   border: 4px solid #E040D0;
-  width: 500px;
+  max-width: 500px;
   margin: 40px auto;
   padding: 20px;
   text-align: center;
@@ -278,7 +278,7 @@ header {
   position: absolute;
   bottom: -50px;
   left: 50%;
-  z-index: 999;
+  z-index: 1000;
   transform: translateX(-50%);
   background: #00F;
   color: #FFF;
@@ -379,8 +379,15 @@ cursor: pointer;
 
 @media (max-width: 600px) {
 
+
+  .icon-row{
+    gap: 40px;
+    row-gap: 0px;
+    margin-top: 10px;
+  }
+
   .leaderboard-box {
-    max-width: 70%;
+    max-width: 100%;
     margin: 20px auto;
     padding: 10px;
   }
@@ -419,6 +426,7 @@ cursor: pointer;
 
 .white-box-text {
   width: 90%;
+}
 
   .pink-header {
     padding: 4px;
@@ -432,18 +440,13 @@ cursor: pointer;
     font-size: 20px;
   }
 
-  .icon-row{
-    display: inline-block;
-    gap: 0px;
-  }
-
   .audio-player {
   position: fixed;
-  top: 300px;
-  right: 40px;
+  top: 400px;
+  align-self: center;
   text-align: center;
   cursor: pointer;
-  z-index: 10000;
+  z-index: 1000;
 }
 
   .marquee__content {
