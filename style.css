@@ -73,6 +73,16 @@ header {
   word-wrap: break-word;
 }
 
+.contact-body {
+  font-family: "Press Start 2P";
+  color: #E040D0;
+  text-align: left;
+  line-height: 20px;
+  font-size: 14px;
+  margin: 1px;
+  word-wrap: break-word;
+}
+
 .white-box-text {
   display: block;
   font-family: "Press Start 2P";
