@@ -48,7 +48,7 @@ header {
   color: yellow;
   padding: 20px;
   text-align: center;
-  line-height: 50px;
+  line-height: 70px;
   width: 80%;
   margin: 10px 0;
   text-shadow: 4px 4px 0px #E040D0;
@@ -161,7 +161,7 @@ header {
 }
 
 .underbelly {
-  font-size: 32px;
+  font-size: 40px;
   padding: 20px 0px;
 }
 
