@@ -5,7 +5,8 @@
 }
 
 
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -22,7 +23,7 @@ body {
   font-family: "Press Start 2P", serif;
 }
 
-.left-body{
+.left-body {
   align-items: left;
 }
 
@@ -131,14 +132,15 @@ header {
   cursor: pointer;
 }
 
-.icon:hover .icon-label{
-  color:white;
+.icon:hover .icon-label {
+  color: white;
 }
 
 .leaderboard-header {
   text-align: center;
   flex-direction: column;
-  margin-top: 200px; /* Decrease by 10px for each entry on leaderboard and vice versa */
+  margin-top: 200px;
+  /* Decrease by 10px for each entry on leaderboard and vice versa */
 }
 
 .yellow-header {
@@ -149,7 +151,8 @@ header {
 }
 
 .pink-header {
-  color: #E040D0; /* Pink */
+  color: #E040D0;
+  /* Pink */
   margin: 0;
   margin-bottom: 10px;
   line-height: 1.2;
@@ -157,7 +160,7 @@ header {
   padding: 0;
 }
 
-.underbelly{
+.underbelly {
   font-size: 32px;
   padding: 20px 0px;
 }
@@ -177,16 +180,36 @@ header {
   z-index: 1000;
 }
 
- .about-text
-  {
-    font-size: 20px;
-    color: #E040D0;
-    max-width: 600px;
-    line-height: 30px;
-    text-align: center;
-    margin-bottom: 5px;
-  }
+.about-text {
+  font-size: 20px;
+  color: #E040D0;
+  max-width: 600px;
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 5px;
+}
 
+.about-columns {
+  font-size: 12px;
+  color: #e18cd8;
+  line-height: 25px;
+}
+
+.row {
+  display: flex;
+  flex-flow: row;
+}
+
+.item {
+  padding: 20px;
+  width: 90%;
+  margin: 10px;
+}
+
+.about-name {
+  font-weight: bold;
+  color: #E040D0;
+}
 
 
 /***********************************************************
@@ -214,8 +237,8 @@ header {
   cursor: pointer;
 }
 
-.audio-player:hover .icon-label{
-  color:white;
+.audio-player:hover .icon-label {
+  color: white;
 }
 
 /***********************************************************
@@ -287,14 +310,14 @@ header {
   font-size: 1rem;
   width: 800px;
   line-height: 25px;
-/*  white-space: nowrap;*/
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  /*  white-space: nowrap;*/
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-.name-link:hover{
-color: white;
-text-decoration: underline;
-cursor: pointer;
+.name-link:hover {
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .scoreboard-footer {
@@ -308,34 +331,37 @@ cursor: pointer;
 ************************************************************/
 
 /* Gallery Title */
-    .gallery-title {
-      color: #E040D0;
-      font-size: 2rem;
-      margin-bottom: 40px; /* Space below title */
-      text-transform: uppercase;
-    }
+.gallery-title {
+  color: #E040D0;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  /* Space below title */
+  text-transform: uppercase;
+}
 
-    /* White box for the image placeholder */
-    .gallery-item {
-      background-color: white;
-      width: 80%;
-      max-width: 400px;
-      height: 300px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 10px; /* Space below each box */
-      color: black;
-      text-align: center;
-    }
+/* White box for the image placeholder */
+.gallery-item {
+  background-color: white;
+  width: 80%;
+  max-width: 400px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  /* Space below each box */
+  color: black;
+  text-align: center;
+}
 
-    /* Pink caption below each box */
-    .gallery-caption {
-      color: #E040D0; 
-      margin-bottom: 40px; /* Space before next item */
-      text-align: center;
-      font-size: 1rem;
-    }
+/* Pink caption below each box */
+.gallery-caption {
+  color: #E040D0;
+  margin-bottom: 40px;
+  /* Space before next item */
+  text-align: center;
+  font-size: 1rem;
+}
 
 
 .banner {
@@ -369,6 +395,7 @@ cursor: pointer;
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -382,7 +409,7 @@ cursor: pointer;
 @media (max-width: 600px) {
 
 
-  .icon-row{
+  .icon-row {
     gap: 40px;
     row-gap: 0px;
     margin-top: 10px;
@@ -394,22 +421,23 @@ cursor: pointer;
     padding: 10px;
   }
 
-  .leaderboard-header{
-    margin-top: 120px; /* Decrease by 10px for each entry on leaderboard and vice versa */
+  .leaderboard-header {
+    margin-top: 120px;
+    /* Decrease by 10px for each entry on leaderboard and vice versa */
   }
 
-.welcome-header{
-  font-size: 24px; 
-  line-height: 40px;
-  padding: 0 0 20 0;
-}
+  .welcome-header {
+    font-size: 24px;
+    line-height: 40px;
+    padding: 0 0 20 0;
+  }
 
   .scoreboard-title {
     font-size: 3rem;
   }
 
   .scoreboard-cell {
-    font-size: .8rem;  
+    font-size: .8rem;
     white-space: normal;
     word-wrap: break-word;
     padding: 8px;
@@ -418,22 +446,23 @@ cursor: pointer;
 
   /* tooltip text size */
   .scoreboard-row[data-tooltip]:hover::after {
-    display: none; /* Hide the element on mobile */
+    display: none;
+    /* Hide the element on mobile */
   }
 
-  .underbelly{
-  font-size: 1.2rem;
-  line-height: 1.6;
-  padding: 10px 0px;
-}
+  .underbelly {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    padding: 10px 0px;
+  }
 
-.underbelly-body{
-  padding: 20px 0px;
-}
+  .underbelly-body {
+    padding: 20px 0px;
+  }
 
-.white-box-text {
-  width: 90%;
-}
+  .white-box-text {
+    width: 90%;
+  }
 
   .pink-header {
     padding: 4px;
@@ -448,35 +477,36 @@ cursor: pointer;
   }
 
   .audio-player {
-  position: fixed;
-  top: 400px;
-  align-self: center;
-  text-align: center;
-  cursor: pointer;
-  z-index: 1000;
-}
+    position: fixed;
+    top: 400px;
+    align-self: center;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1000;
+  }
 
   .marquee__content {
-  font-size: 1.5rem;
-}
-
-.script-header {
-  text-align: center;
-  font-size: 16px;
-}
-
-.script-body {
-  line-height: 16px;
-  text-align: center;
-  font-size: 12px;
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
+    font-size: 1.5rem;
   }
-  100% {
-    transform: translateX(-80%);
+
+  .script-header {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .script-body {
+    line-height: 16px;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-80%);
     }
   }
 }
