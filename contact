@@ -1,0 +1,45 @@
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="underbelly-body">
+
+</body>
+
+  <!-- Main content -->
+ <!DOCTYPE html>
+
+   <h1 class="yellow-header">Contact us</h1>
+
+    <br>
+
+    <!-- <h3 class="script-header">For any inquiries about the show, please reach out to Riley and Tess: tessandriley@gmail.com</h3>
+  
+    <br>
+
+  <!-- <h3 class="script-header">If you’d like to get in touch with anyone from our wonderful team for any reason, here are their emails:</h3>
+    <br>
+  <p class="script-body">Caroline Potter Shriver - cpshriver18@gmail.com (DIRECTOR, THE VILLAGE SALON XII PERFORMANCE)</p>
+  <p class="script-body">Ellie Hiltey - INSERT ELLIE EMAIL (COSTUME DESIGNER, THE VILLAGE SALON XII PERFORMANCE)</p>
+  <p class="script-body">Gideon Fox - jugglerfox@gmail.com (WEBSITE DESIGNER)</p>
+  <p class="script-body">Jesse Montagna - jmontagna1@gmail.com (‘COLM’, THE VILLAGE SALON XII PERFORMANCE)</p>
+  <p class="script-body">Michael Bloom - michaelpbloom@gmail.com (PRODUCER)</p>
+  <p class="script-body">Natalie Sharpe - nataliesharpe16@gmail.com (CO-CREATOR)4</p>
+  <p class="script-body">Sky Karasik - skykarasik@gmail.com (HEAD OF PHOTOGRAPHY)</p>
+  <p class="script-body">Zachary Schwartz - zach72692@gmail.com (‘DR. SMEETER,' THE VILLAGE SALON XII PERFORMANCE)</p>
+
+ -->
+    <br>
+
+  <button class="yellow-button" style="position: absolute; bottom: 20px;" onclick="window.location.href='welcome.html'">HOME</button>
+</body>
+
+</body>
+</html>
