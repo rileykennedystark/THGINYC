@@ -278,22 +278,64 @@ header {
   border-spacing: 0;
 }
 
+
 .scoreboard-row {
   display: table-row;
   position: relative;
+  
+}
+/* Rainbow neon text colors for each row */
+.scoreboard-row:nth-child(2) .scoreboard-cell {
+  color: #ffff00; /* Yellow */
+}
+
+.scoreboard-row:nth-child(3) .scoreboard-cell {
+  color: #00ffff; /* Cyan */
+}
+
+.scoreboard-row:nth-child(4) .scoreboard-cell {
+  
+  color: #ff00ff; /* Magenta */
+}
+
+.scoreboard-row:nth-child(5) .scoreboard-cell {
+  color: #cc66ff; /* Purple */
+}
+
+.scoreboard-row:nth-child(6) .scoreboard-cell {
+  color: #00ff00; /* Lime */
+} 
+
+.scoreboard-row:nth-child(7) .scoreboard-cell {
+  color: blue; /* White */
+}
+
+.scoreboard-row:nth-child(8) .scoreboard-cell {
+  color: #ff6600; /* Orange */color: 
+}
+
+.scoreboard-row:nth-child(9) .scoreboard-cell {
+  color: deeppink; /* Red */
+}
+
+.scoreboard-row:nth-child(10) .scoreboard-cell {
+  color: #66ccff; /* Light blue */
+}
+
+.scoreboard-row:nth-child(11) .scoreboard-cell {
+  color: #ffff00; /* Yellow */
 }
 
 /* Header row styling */
 .scoreboard-header .scoreboard-cell {
   font-weight: bold;
-  color: yellow;
+  color: white;
 }
 
 /* Each cell in the scoreboard */
 .scoreboard-cell {
   display: table-cell;
   padding: 12px 12px;
-  color: #E040D0;
   vertical-align: middle;
   text-align: center;
   font-size: 1rem;
