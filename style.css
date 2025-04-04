@@ -385,42 +385,53 @@ header {
 }
 
 /***********************************************************
-  GALLERY
+  GALLERY STYLES
 ************************************************************/
 
-/* Gallery Title */
-.gallery-title {
-  color: #E040D0;
-  font-size: 2rem;
-  margin-bottom: 40px;
-  /* Space below title */
-  text-transform: uppercase;
-}
-
-/* White box for the image placeholder */
-.gallery-item {
-  background-color: white;
-  width: 80%;
-  max-width: 400px;
-  height: 300px;
+.gallery-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 10px;
-  /* Space below each box */
-  color: black;
+  gap: 40px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
-/* Pink caption below each box */
+.gallery-item img {
+ 
+  width: 60%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+  border: 3px solid #E040D0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.5);
+}
+
 .gallery-caption {
-  color: #E040D0;
-  margin-bottom: 40px;
-  /* Space before next item */
+  margin-top: 10px;
+  color:black
+  width: 100%;
+  font-size: 8px;
+  color: white;
   text-align: center;
-  font-size: 1rem;
+  line-height: 16px;
+  padding: 20px 15px;
+  font-family: "Press Start 2P", sans-serif;
 }
-
 
 .banner {
   width: 100%;
