@@ -350,22 +350,28 @@ header {
 
 .scoreboard-row[data-tooltip]:hover::after {
   content: attr(data-tooltip);
-  position: absolute;
-  bottom: -100px;
-  left: 50%;
+  position: fixed;
+  top: 50%;                 /* vertical center */
+  right: 40px;              /* adjust space from edge */
+  transform: translateY(-50%);
   z-index: 1000;
-  transform: translateX(-50%);
-  background: black;
-  color: #FFF;
-  padding: 12px 12px;
-  border-radius: 4px;
-  font-size: 1rem;
-  width: 800px;
-  line-height: 25px;
-  /*  white-space: nowrap;*/
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-}
 
+  background: deeppink;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  line-height: 1.2rem;
+
+  width: auto;
+  max-width: 260px;         /* smaller box size */
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
+
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+  pointer-events: none;
+}
 .name-link:hover {
   color: white;
   text-decoration: underline;
