@@ -311,7 +311,7 @@ header {
 }
 
 .scoreboard-row:nth-child(8) .scoreboard-cell {
-  color: #ff6600; /* Orange */color: 
+  color: #ff6600; /* Orange */
 }
 
 .scoreboard-row:nth-child(9) .scoreboard-cell {
@@ -417,13 +417,10 @@ header {
   transition: transform 0.2s ease;
 }
 
-.gallery-item img:hover {
-  transform: scale(1.5);
-}
 
 .gallery-caption {
   margin-top: 10px;
-  color:black
+  color:black;
   width: 100%;
   font-size: 8px;
   color: white;
