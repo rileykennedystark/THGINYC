@@ -210,11 +210,6 @@ header {
   flex-flow: row;
 }
 
-@media (max-width: 768px) {
-  .row {
-    flex-direction: column;
-    align-items: center;
-  }
 
 .item {
   padding: 20px;
@@ -481,6 +476,10 @@ header {
 @media (max-width: 600px) {
 
 
+    .row {
+      flex-direction: column;
+      align-items: center;
+    }
   .icon-row {
     gap: 40px;
     row-gap: 0px;
@@ -581,4 +580,3 @@ header {
       transform: translateX(-80%);
     }
   }
-}
