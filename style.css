@@ -5,6 +5,7 @@
 }
 
 
+}
 html,
 body {
   overflow-x: hidden;
@@ -149,7 +150,7 @@ header {
 .leaderboard-header {
   text-align: center;
   flex-direction: column;
-  margin-top: 200px;
+  margin-top: 50px;
   /* Decrease by 10px for each entry on leaderboard and vice versa */
 }
 
@@ -579,4 +580,3 @@ header {
     100% {
       transform: translateX(-80%);
     }
-  }
