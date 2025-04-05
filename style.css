@@ -487,6 +487,17 @@ header {
     margin-top: 10px;
   }
 
+  .icon-cluster {
+    padding: 150px 0;
+  }
+
+  .floating-icon {
+    position: static;
+    display: inline-block;
+    margin: 20px;
+  }
+
+
   .leaderboard-box {
     max-width: 100%;
     margin: 20px auto;
