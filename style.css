@@ -366,7 +366,6 @@ header {
   right: 40px;              /* adjust space from edge */
   transform: translateY(-50%);
   z-index: 1000;
-
   background: deeppink;
   color: white;
   padding: 10px 14px;
@@ -388,6 +387,11 @@ header {
   text-decoration: underline;
   cursor: pointer;
 }
+
+.scoreboard-row.show-tooltip::after {
+  display: block;
+}
+
 
 .scoreboard-footer {
   margin-top: 20px;
