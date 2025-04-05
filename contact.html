@@ -2,53 +2,123 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-header {
+    font-family: "Press Start 2P", monospace;
+      color: white;
+      text-align: left;
+      line-height: 20px;
+      font-size: 18px;
+      margin: 10px;
+      word-wrap: break-word;
+      padding: 5px;}
+
+    .contact-body {
+      font-family: "Press Start 2P", monospace;
+      color: white;
+      text-align: left;
+      line-height: 20px;
+      font-size: 12px;
+      margin: 10px;
+      word-wrap: break-word;
+      padding: 5px;
+    }
+
+    .contact-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1.yellow-header {
+      color: #FFEB3B;
+      font-size: 30px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .yellow-button {
+      display: block;
+      margin: 30px auto;
+      padding: 10px 20px;
+      font-size: 12px;
+      background-color: #FFEB3B;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: "Press Start 2P", monospace;
+    }
+
+    .yellow-button:hover {
+      background-color: #FFD700;
+    }
+
+    @media screen and (max-width: 480px) {
+      .contact-body {
+        font-size: 11px;
+        line-height: 18px;
+      }
+
+      h1.yellow-header {
+        font-size: 14px;
+      }
+
+      .yellow-button {
+        font-size: 10px;
+        padding: 8px 14px;
+      }
+    }
+  </style>
 </head>
 
-<!-- Main content -->
-<!DOCTYPE html>
-<body>
+<body style="background-color:blue">
+  <div class="contact-container">
+    <h1 class="yellow-header">CONTACT US</h1>
 
-<h1 class="yellow-header">CONTACT US:</h1>
+    <div class="contact-header">
+      <p>For any inquiries about the show, reach out to Riley and Tess:<br>
+       <br> <strong>tessandriley@gmail.com</strong>
+      </p>
 
-<br>
+      <p>If you'd like to contact anyone from our team, here are their emails:</p>
+    </div>
+    <div class="contact-body">
+      <p>Caroline Potter Shriver — cpshriver18@gmail.com<br>
+        (DIRECTOR, THE VILLAGE SALON XII PERFORMANCE)<br><br>
 
-<div class="contact-header">
-<p style="color: white; padding:10px; margin:10px; line-height:30px; font-size: 20px;">
-  For any inquiries about the show, please reach out to Riley and Tess: tessandriley@gmail.com <br><br>  If you'd like to get in touch with anyone from our wonderful team for any reason, here are
-  their emails:
-  </p>
+        Ellie Hiltey — <em>INSERT ELLIE EMAIL</em><br>
+        (COSTUME DESIGNER)<br><br>
+
+        Gideon Fox — jugglerfox@gmail.com<br>
+        (WEB DEVELOPER)<br><br>
+
+        Jess ____ — <em>INSERT EMAIL</em><br>
+        (WEB DEVELOPER)<br><br>
+
+        Jesse Montagna — jmontagna1@gmail.com<br>
+        (‘COLM’)<br><br>
+
+        Michael Bloom — michaelpbloom@gmail.com<br>
+        (PRODUCER)<br><br>
+
+        Natalie Sharpe — nataliesharpe16@gmail.com<br>
+        (CO-CREATOR)<br><br>
+
+        Sky Karasik — skykarasik@gmail.com<br>
+        (HEAD OF PHOTOGRAPHY)<br><br>
+
+        Zachary Schwartz — zach72692@gmail.com<br>
+        (‘DR. SMEETER’)
+      </p>
+    </div>
+
+    <button class="yellow-button" onclick="window.location.href='welcome.html'">HOME</button>
   </div>
-  <div class="contact-body">
-<p style="color:white; padding:10px; margin:10px; line-height:30px; font-size: 14px;">
-  Caroline Potter Shriver - cpshriver18@gmail.com 
-  <br>(DIRECTOR, THE VILLAGE SALON XII PERFORMANCE)<br><br>
-  Ellie Hilty - INSERT ELLIE EMAIL 
-  <br>(COSTUME DESIGNER, THE VILLAGE SALON XII PERFORMANCE)<br><br>
-  Gideon Fox - jugglerfox@gmail.com 
-  <br>(WEB DEVELOPER)<br><br>
-  Jess ____ - INSERT EMAIL <br>
- (WEB DEVELOPER)}
- <br><br>
-  Jesse Montagna - jmontagna1@gmail.com 
-  <br>(‘COLM’, THE VILLAGE SALON XII PERFORMANCE)<br><br>
-  Michael Bloom - michaelpbloom@gmail.com 
-  <br>(PRODUCER)<br><br>
-  Natalie Sharpe - nataliesharpe16@gmail.com 
-  <br>(CO-CREATOR)<br><br>
-  Sky Karasik - skykarasik@gmail.com 
-  <br>(HEAD OF PHOTOGRAPHY)<br><br>
-  Zachary Schwartz - zach72692@gmail.com <br>
-  (‘DR. SMEETER,' THE VILLAGE SALON XII PERFORMANCE)<br>
-  <br></p>
-</p>
-</div>
-<button class="yellow-button" onclick="window.location.href='welcome.html'">HOME</button>
 </body>
-
 </html>
