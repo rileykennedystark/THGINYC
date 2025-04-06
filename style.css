@@ -531,9 +531,26 @@ header {
   }
 
   /* tooltip text size */
-  .scoreboard-row[data-tooltip]:hover::after {
-    display: none;
-    /* Hide the element on mobile */
+  .scoreboard-row[data-tooltip]:hover::after, .scoreboard-row.show-tooltip::after {
+    content: attr(data-tooltip);
+    position: fixed;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+    z-index: 1000;
+    background: deeppink;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    line-height: 1.2rem;
+    width: auto;
+    max-width: 260px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+    pointer-events: none;
   }
 
   .underbelly {
