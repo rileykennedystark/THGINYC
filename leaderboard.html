@@ -91,7 +91,7 @@ If you need a job done well, you should email him: michaelpbloom@gmail.com">
 
         <!-- ENTRY -->
         <div class="scoreboard-row" data-tooltip="We love Maret and Tad.">
-          <div class="scoreboard-cell name-link" onclick="window.open('INSERT_URL', '_blank')">TAD AND MARET ASARO</div>
+          <div class="scoreboard-cell name-link" >TAD AND MARET ASARO</div>
           <div class="scoreboard-cell">THE GREAT BELIEVERS</div>
           <div class="scoreboard-cell">10000</div>
         </div>
@@ -148,27 +148,30 @@ You should put him in your show. He’s his email: Zach72692@gmail.com">
     const isMobile = /Mobi|Android/i.test(navigator.userAgent);
   
     if (isMobile) {
-      document.querySelectorAll('.scoreboard-row').forEach(row => {
-        const nameCell = row.querySelector('.name');
+      // Create tooltip element
+      const tooltip = document.createElement('div');
+      tooltip.className = 'mobile-tooltip';
+      document.body.appendChild(tooltip);
   
-        if (nameCell) {
-          nameCell.addEventListener('click', (e) => {
-            e.stopPropagation();
-            document.querySelectorAll('.scoreboard-row').forEach(r => r.classList.remove('show-tooltip'));
-            row.classList.add('show-tooltip');
+      // Show tooltip on tap
+      document.querySelectorAll('.scoreboard-row[data-tooltip]').forEach(row => {
+        row.addEventListener('click', e => {
+          e.stopPropagation();
+          const text = row.getAttribute('data-tooltip');
+          tooltip.textContent = text;
+          tooltip.classList.add('show');
   
-            // Optional: Hide after 4 seconds
-            setTimeout(() => {
-              row.classList.remove('show-tooltip');
-            }, 4000);
-          });
-        }
+          // Optional: auto-hide after 4 seconds
+          setTimeout(() => {
+            tooltip.classList.remove('show');
+          }, 4000);
+        });
       });
   
-      // Tap elsewhere to hide
-      document.body.addEventListener('click', (e) => {
-        if (!e.target.closest('.name')) {
-          document.querySelectorAll('.scoreboard-row').forEach(r => r.classList.remove('show-tooltip'));
+      // Hide on background tap
+      document.body.addEventListener('click', e => {
+        if (!e.target.closest('.scoreboard-row')) {
+          tooltip.classList.remove('show');
         }
       });
     }
