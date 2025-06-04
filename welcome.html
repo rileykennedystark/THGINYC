@@ -8,6 +8,101 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcome</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+
+.main-wrapper {
+  position: relative;
+  padding: 60px 0;
+}
+
+.icon-row {
+  display: flex; /* Ensures icons are arranged in a horizontal row */
+  justify-content: center; /* Centers the icons */
+  gap: 40px; /* Adds space between icons */
+  margin-top: 20px; /* Adjusted space between header and icons */
+}
+
+.icon {
+  text-align: center;
+  position: relative;
+}
+
+.icon-image {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.icon-label {
+  margin-top: 5px;
+  font-size: 14px;
+  color: yellow;
+}
+
+/* Specific positioning for LEADERBOARD */
+.icon-cluster {
+  position: absolute;
+  top: 40px;
+  left: 20%;
+}
+
+/* DICTIONARY position */
+.icon-center-top {
+  position: absolute;
+  top: 10px; /* Slightly higher up than DICTIONARY */
+  right: 30%; /* Move it to the right of DICTIONARY */
+  transform: translateX(-50%); /* Center it horizontally relative to its own position */
+}
+
+.audio-player {
+  position: fixed;
+  top: 100px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* GALLERY (much lower, closer to the footer) */
+.icon-bottom-left {
+  margin-top: 100px; /* Pushes the GALLERY icon further down */
+  margin-left: 5%; /* You can adjust this value to move it horizontally */
+}
+
+.icon-bottom-right {
+  position: absolute;
+  bottom: 80px;
+  right: 5%;
+}
+
+.icon-bottom-center {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.icon-header {
+  text-align: center;
+  font-size: 3em;
+  margin-top: 80px;
+}
+
+@media (max-width: 768px) {
+  .icon-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icon-cluster,
+  .audio-player,
+  .icon-bottom-left,
+  .icon-bottom-right,
+  .icon-bottom-center {
+    position: static;
+    transform: none;
+    margin-bottom: 20px;
+  }
+}
+  </style>
 </head>
 <body>
 
@@ -59,24 +154,24 @@
 
   <main>
 
-     <!-- Icon 1 -->
-  <div class="icon-row">
+ 
 
+ 
       <!-- Icon DICTIONARY -->
-  <div class="icon-cluster" style="top: 30px; left: 5%;"30px;" onclick="window.location.href='dictionary.html'">
+ <!-- <div class="icon-cluster" style="top: 30px; left: 5%;"30px;" onclick="window.location.href='dictionary.html'">
     <a href="#dictionary">
       <img src="icons/DICTIONARY ICON.png" alt="dictionary" class="icon-image">
     </a>
     <div class="icon-label">DICTIONARY</div>
-  </div>
+  </div> -->
 
         <!-- Icon 3 -->
-        <div class="icon " style="margin-bottom: 30px;" onclick="window.location.href='about.html'">
+         <!-- <div class="icon " style="margin-bottom: 30px;" onclick="window.location.href='about.html'">
           <a href="#info">
             <img src="icons/Looking at the world icon.png" alt="info" class="icon-image">
           </a>
           <div class="icon-label">ABOUT</div>
-        </div>
+        </div>-->
     
     
     <!-- Icon 2 -->
@@ -93,6 +188,59 @@
       <sparkly-text number-of-sparkles="4" class="yellow-header welcome-header" style="width: 100%; --sparkly-text-size: 3em; --sparkly-text-color: #FF70BF;"><br>THE HORNIEST GIRLS IN NEW YORK CITY </sparkly-text>
       </header>
 
+        <!-- Icon Row Underneath Header - Horizontal Alignment -->
+   <div class="icon-row">
+    <div class="icon" onclick="window.location.href='https://www.underbellyedinburgh.co.uk/events/event/the-horniest-girls-in-new-york-city'">
+      <img src="icons/CALENDAR ICON.png" alt="Show Dates & Tickets" class="icon-image">
+      <div class="icon-label">SHOW DATES <br>& TICKETS</div>
+    </div>
+    <div class="icon" onclick="window.location.href='about.html'">
+      <img src="icons/Looking at the world icon.png" alt="About" class="icon-image">
+      <div class="icon-label">ABOUT</div>
+    </div>
+    <div class="icon" onclick="window.location.href='contact.html'">
+      <img src="icons/send mail icon.png" alt="Contact" class="icon-image">
+      <div class="icon-label">CONTACT</div>
+    </div>
+  </div>
+
+     <!-- Scattered Icons -->
+     <div class="icon-center-top">
+      <a href="dictionary.html">
+        <img src="icons/DICTIONARY ICON.png" alt="Dictionary" class="icon-image">
+      </a>
+      <div class="icon-label">DICTIONARY</div>
+    </div>
+
+    <div class="icon-bottom-center" onclick="window.location.href='https://youtu.be/UNkQdUYomkw?si=co4fIT0guDxXjYsg'">
+      <img src="icons/disk-2.png" alt="Disk" class="icon-image">
+      <div class="icon-label">WATCH SCENE: <br> Meet Tess and Riley</div>
+    </div>
+
+     <!-- Bottom Scattered Icons -->
+     <div class="icon-bottom-left">
+      <a href="gallery.html">
+        <img src="icons/GALLERY ICON.png" alt="Gallery" class="icon-image">
+      </a>
+      <div class="icon-label">GALLERY</div>
+    </div>
+
+    <div class="icon-cluster">
+      <a href="leaderboard.html">
+        <img src="icons/Tree icon.png" alt="Leaderboard" class="icon-image">
+      </a>
+      <div class="icon-label">LEADERBOARD</div>
+    </div>
+
+    <div class="audio-player">
+      <a href="MOMMY.html">
+        <img src="icons/MOMMY icon.png" alt="Mommy?" class="icon-image">
+      </a>
+      <div class="icon-label">MOMMY?</div>
+    </div>
+
+  </div>
+
          <!-- TESS AND RILEY ICON -->
            <!-- 
  <div class="icon " style="margin-bottom: 10px;" onclick="window.location.href='tess-and-riley.html'">
@@ -103,27 +251,27 @@
    </div>  
   -->
   <!-- CONTACT ICON -->
-  <div class="icon " style="margin-bottom: 30px;" onclick="window.location.href='contact.html'">
+ <!-- <div class="icon " style="margin-bottom: 30px;" onclick="window.location.href='contact.html'">
     <a href="#CONTACT">
       <img src="icons/send mail icon.png" alt="Contact" class="icon-image">
     </a>
     <div class="icon-label">CONTACT</div>
-  </div>
+  </div>-->
 
         <!-- Icon Show Dates & Tickets -->
-        <div class="icon " style="margin-bottom: 0px;" onclick="window.location.href='https://www.underbellyedinburgh.co.uk/events/event/the-horniest-girls-in-new-york-city'">
+   <!--     <div class="icon " style="margin-bottom: 0px;" onclick="window.location.href='https://www.underbellyedinburgh.co.uk/events/event/the-horniest-girls-in-new-york-city'">
           <a href="#showdatesandtickets">
             <img src="icons/CALENDAR ICON.png" alt="leaderboard" class="icon-image">
           </a>
           <div class="icon-label">SHOW DATES & TICKETS</div>
-        </div>
+        </div> -->
  
-<div class="icon" style="margin-bottom: 30px;" onclick="window.location.href='gallery.html'">
+ <!-- <div class="icon" style="margin-bottom: 30px;" onclick="window.location.href='gallery.html'">
   <a href="#gallery">
     <img src="icons/GALLERY ICON.png" alt="photo" class="icon-image">
   </a>
   <div class="icon-label">GALLERY</div>
-  </div> 
+  </div> -->
 
 
 
@@ -139,15 +287,15 @@
 
 
      <!-- Icon LEADERBOARD -->
-     <div class="icon " style="margin-bottom: 0px;" onclick="window.location.href='leaderboard.html'">
+    <!--  <div class="icon " style="margin-bottom: 0px;" onclick="window.location.href='leaderboard.html'">
       <a href="#leaderboard">
         <img src="icons/Tree icon.png" alt="leaderboard" class="icon-image">
       </a>
       <div class="icon-label">LEADERBOARD</div>
-    </div>
+    </div>-->
 
     <!-- Fixed audio player icon -->
-  
+   <!--  
 <div class="audio-player" onclick="window.location.href='https://youtu.be/UNkQdUYomkw?si=co4fIT0guDxXjYsg'" style=" position: fixed;
 top: 20px; right: 40px;">
       <img src="icons/disk-2.png" alt="disk-2" class="icon-image">
@@ -161,14 +309,14 @@ top: 20px; right: 40px;">
   
 
     <!-- Icon MOMMY-->
-    <div class="icon"  style="margin-bottom: 80px;" onclick="window.location.href='MOMMY.html'" style=" position: fixed;
-      bottom: 40px; right: 40px;">
-      <!-- Link wrapping the icon image -->
-      <a href="#MOMMY">
+    <!-- <div class="icon"  style="margin-bottom: 80px;" onclick="window.location.href='MOMMY.html'" style=" position: fixed;
+      bottom: 20px; right: 40px;">
+      Link wrapping the icon image -->
+    <!--   <a href="#MOMMY">
         <img src="icons/MOMMY icon.png" alt="mommy" class="icon-image">
       </a>
       <div class="icon-label">MOMMY?</div>
-    </div>  
+    -->
 
 
   
