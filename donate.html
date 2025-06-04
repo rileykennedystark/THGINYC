@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Budget</title>
+  <title>Donate</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
@@ -13,6 +13,29 @@
       font-size: 20px;
       text-align: center;
     }
+  
+    .tooltip-text[data-tooltip]:hover::after {
+  content: attr(data-tooltip);
+  position: fixed;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+  z-index: 1000;
+  background: blue;
+  color: white;
+  padding: 14px 18px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  line-height: 1.2rem;
+  max-width: 360px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  font-family: sans-serif;
+  text-shadow: none; /* ✅ This removes the pink glow */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+}
   </style>
 </head>
 
@@ -42,7 +65,20 @@
     </p>
   </div>
 
-  <h1 class="yellow-header" style="font-size: 16px;">We would use your money very wisely.</h1>
+  <h1 class="yellow-header tooltip-text" style="font-size: 20px; cursor: pointer;"
+  data-tooltip="For example:
+  $5 - Wonderbread, to live.
+$25 - 1 Landline Telephone.
+$40 - 1,000 custom stickers we will cover the streets and people of Scotland with.
+$55 - 1 night Tess and Riley don’t have to sleep in a tent in Scotland. You can choose which one gets the floor.
+$110 - Tess and Riley can not only not sleep in a tent but they can also each have their own twin bed for a night.
+$330 - All of the costumes for the whole play.
+$600 - Feed our whole team for 6 days of rehearsal in Vermont.
+$900 - Tess or Riley’s flight to Scotland. You can also choose this one, or we can flip a coin.
+$1,176 - Fringe Festival Venue Deposit.
+$5,500 - Fly our entire team to Scotland and back.">
+  We will use your money very wisely.
+</h1>
 
   <!-- Donate button styled as a header -->
   <h1 class="yellow-header" style="text-decoration: underline; cursor: pointer; margin: 20px 0px;" onclick="window.open('https://airtable.com/appcCtkV1YLAynufP/shrgwli4YSm9DjWDP', '_blank')">VENMO: <br> @THGINYC</h1>

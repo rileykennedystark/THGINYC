@@ -4,112 +4,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact</title>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    .contact-header {
-    font-family: "Press Start 2P", monospace;
-      color: white;
-      text-align: center;
-      line-height: 20px;
-      font-size: 18px;
-      margin: 10px;
-      word-wrap: break-word;
-      padding: 5px;}
-
-    .contact-body {
-      font-family: "Press Start 2P", monospace;
-      color: white;
-      text-align: center;
-      line-height: 20px;
-      font-size: 12px;
-      margin: 10px;
-      word-wrap: break-word;
-      padding: 5px;
-    }
-
-    .contact-container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    h1.yellow-header {
-      color: #FFEB3B;
-      font-size: 30px;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .yellow-button {
-      display: block;
-      margin: 30px auto;
-      padding: 10px 20px;
-      font-size: 12px;
-      background-color: #FFEB3B;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-family: "Press Start 2P", monospace;
-    }
-
-    .yellow-button:hover {
-      background-color: #FFD700;
-    }
-
-    @media screen and (max-width: 480px) {
-  body {
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
-  }
-
-  .contact-container {
-    padding: 10px;
-    text-align: center;
-  }
-
-  .contact-body, .contact-header {
-    font-size: 9px;
-    line-height: 16px;
-    word-break: break-word;
-    padding: 4px;
-    margin: 6px;
-  }
-
-  h1.yellow-header {
-    font-size: 16px;
-    padding: 10px;
-  }
-
-  .yellow-button {
-    width: 100%;
-    font-size: 10px;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-}
-  </style>
 </head>
 
-<body style="background-color:blue">
-  <div class="contact-container">
-    <h1 class="yellow-header">EMAIL US.</h1>
+<body class="underbelly-body">
 
-   
-    <div class="contact-header">
-      <p><p style="color:hotpink">
-       <br> <strong>tessandriley@gmail.com</strong>
-      </p>
 
-  
-        
-        
-    </div>
+  <!-- Main content -->
 
-    <button class="yellow-button" onclick="window.location.href='welcome.html'">HOME</button>
+  <h1 class="yellow-header" style="margin: 20px 0px;">EMAIL US.</h1>
+
+  <div 
+    class="about-text" 
+    style="font-size: 24px; color: hotpink; width: 80%; max-width: none; text-align: center; cursor: pointer;" 
+    onclick="copyEmail()"
+    title="Click to copy"
+  >
+    tessandriley@gmail.com
+    <br><br>
+    <span id="copy-confirmation" style="display: none; font-size: 12px; color: yellow;">Copied to clipboard!</span>
   </div>
+  
+  <button class="yellow-button" onclick="window.location.href='welcome.html'">HOME</button>
+  
+  <script>
+    function copyEmail() {
+      const email = "tessandriley@gmail.com";
+      navigator.clipboard.writeText(email).then(() => {
+        const confirmation = document.getElementById("copy-confirmation");
+        confirmation.style.display = "inline";
+        setTimeout(() => {
+          confirmation.style.display = "none";
+        }, 1500);
+      });
+    }
+  </script>
 </body>
 </html>
