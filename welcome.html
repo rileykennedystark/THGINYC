@@ -42,34 +42,42 @@
 /* Specific positioning for LEADERBOARD */
 .icon-cluster {
   position: absolute;
-  top: 30px;
-  left: 20%;
+  top: 20px;
+  left: 15%;
 }
 
 /* DICTIONARY position */
 .icon-center-top {
   position: absolute;
   top: 5px; /* Slightly higher up than DICTIONARY */
-  right: 20%; /* Move it to the right of DICTIONARY */
+  right: 30%; /* Move it to the right of DICTIONARY */
+  transform: translateX(-50%); /* Center it horizontally relative to its own position */
+}
+
+/* SUPPORT OUR PLAY position */
+.icon-center-right {
+  position: absolute;
+  top: 20px; /* Slightly higher up than DICTIONARY */
+  right: 0%; /* Move it to the right of DICTIONARY */
   transform: translateX(-50%); /* Center it horizontally relative to its own position */
 }
 
 .audio-player {
   position: fixed;
   top: 100px;
-  right: 10px;
+  right: 50px;
   cursor: pointer;
 }
 
 /* GALLERY (much lower, closer to the footer) */
 .icon-bottom-left {
   margin-top: 110px; /* Pushes the GALLERY icon further down */
-  margin-left: 25%; /* You can adjust this value to move it horizontally */
+  margin-left: 15%; /* You can adjust this value to move it horizontally */
 }
 
 .icon-bottom-right {
   position: absolute;
-  bottom: 80px;
+  bottom: 150px;
   right: 5%;
 }
 
@@ -212,13 +220,21 @@
       <div class="icon-label">DICTIONARY</div>
     </div>
 
-    <div class="icon-bottom-right" onclick="window.location.href='https://youtu.be/UNkQdUYomkw?si=co4fIT0guDxXjYsg'">
+    <div class="audio-player " style="margin-bottom: 30px;" onclick="window.location.href='donate.html'">
+      <a href="#BUDGETß">
+       <img src="icons/smile.png" alt="budget" class="icon-image">
+      </a> 
+      <div class="icon-label">SUPPORT <br>OUR PLAY</div>
+      
+    </div>
+
+    <div class="icon-bottom-left" onclick="window.location.href='https://youtu.be/UNkQdUYomkw?si=co4fIT0guDxXjYsg'">
       <img src="icons/disk-2.png" alt="Disk" class="icon-image">
       <div class="icon-label">WATCH SCENE: <br> Meet Tess and Riley</div>
     </div>
 
      <!-- Bottom Scattered Icons -->
-     <div class="icon-bottom-left">
+     <div class="icon">
       <a href="gallery.html">
         <img src="icons/GALLERY ICON.png" alt="Gallery" class="icon-image">
       </a>
@@ -232,7 +248,7 @@
       <div class="icon-label">LEADERBOARD</div>
     </div>
 
-    <div class="audio-player">
+    <div class="icon-bottom-right" style="margin-bottom: 30px;" 
       <a href="MOMMY.html">
         <img src="icons/MOMMY icon.png" alt="Mommy?" class="icon-image">
       </a>
@@ -276,14 +292,8 @@
 
 
  <!-- Icon Donate-->
- <!--  
- <div class="icon " style="margin-bottom: 30px;" onclick="window.location.href='donate.html'">
-  <a href="#BUDGETß">
-   <img src="icons/smile.png" alt="budget" class="icon-image">
-  </a> 
-  <div class="icon-label">SUPPORT OUR PLAY</div>
   
-</div>-->
+
 
 
      <!-- Icon LEADERBOARD -->
