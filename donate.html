@@ -7,20 +7,171 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
-
-/* Disable marquee animation on mobile */
-@media (max-width: 768px) {
-  .marquee,
-  .marquee__content {
-    animation: none !important;
-    transform: none !important;
-    overflow: visible !important;
-    white-space: normal !important;
-    display: block !important;
-    width: 100% !important;
-    text-align: center !important;
-  }
+    /* Disable marquee animation on mobile */
+    @media (max-width: 768px) {
+      .marquee,
+      .marquee__content {
+        animation: none !important;
+        transform: none !important;
+        overflow: visible !important;
+        white-space: normal !important;
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+      }
+    
+      /* Completely hide the marquee banner on mobile */
+      .banner {
+        display: none !important;
+      }
+    }
+ .yellow-header {
+  color: yellow;
+  font-family: "Press Start 2P", serif;
+  font-size: 20px;
+  text-align: center;
 }
+
+.copy-link {
+  color: yellow;
+  font-family: "Press Start 2P", serif;
+  text-decoration: underline;
+  cursor: pointer;
+}
+  
+.tooltip-box {
+  position: fixed;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+  z-index: 1000;
+  background: blue;
+  color: white;
+  padding: 14px 18px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  line-height: 1.2rem;
+  max-width: 360px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  font-family: sans-serif;
+  text-shadow: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+  </style>
+</head>
+
+<body class="donate" style="padding-top: 100px;">
+
+  <!-- Marquee -->
+  <div class="banner" style="background-color: yellow;">
+    <div class="marquee">
+      <span class="marquee__content">
+        SUPPORT OUR PLAY SUPPORT OUR PLAY SUPPORT OUR PLAY SUPPORT OUR PLAY SUPPORT OUR PLAY SUPPORT OUR PLAY SUPPORT OUR PLAY SUPPORT OUR PLAY SUPPORT OUR PLAY SUPPORT OUR PLAY 
+      </span>
+    </div>
+  </div>
+
+  <!-- Moved the header down with margin -->
+   <!--
+  <h1 class="yellow-header" style="margin-top: 80px;">SUPPORT OUR PLAY.</h1>-->
+
+
+  <div style="display: flex; justify-content: center;">
+    <p style="color:white; padding:10px; margin:10px; line-height:30px; font-size:16px; max-width:600px; text-align: center;">
+      The Horniest Girls in New York City was invited to premiere at this year’s Edinburgh Fringe Festival.
+      <br><br>
+      The show will debut in a 2-week run at Underbelly Cowgate, where Phoebe Waller Bridge debuted ‘Fleabag’ to the world 12 years ago.
+      <br><br>
+      This will cost about $30,000 to produce.
+    </p>
+  </div>
+  <h1 class="about-text tooltip-text" style="font-size: 20px; color: white; cursor: pointer; text-decoration: underline; margin: 20px 0px; text-align: center;"
+  data-tooltip="For example:
+  $5 - Wonderbread, to live.
+$25 - 1 Landline Telephone.
+$40 - 1,000 custom stickers we will cover the streets and people of Scotland with.
+$55 - 1 night Tess and Riley don’t have to sleep in a tent in Scotland. You can choose which one gets the floor.
+$110 - Tess and Riley can not only not sleep in a tent but they can also each have their own twin bed for a night.
+$330 - All of the costumes for the whole play.
+$600 - Feed our whole team for 6 days of rehearsal in Vermont.
+$900 - Tess or Riley’s flight to Scotland. You can also choose this one, or we can flip a coin.
+$1,176 - Fringe Festival Venue Deposit.
+$5,500 - Fly our entire team to Scotland and back.">
+  We will use your money very wisely.
+</h1>
+</h1>
+<p style="font-size: 10px; color: hotpink; margin-top: -10px;">(click to see how)</p>
+</div>
+
+<!-- NEW SUPPORT HEADER -->
+<h1 class="yellow-header" style="margin-top: 40px;">SUPPORT OUR PLAY:</h1>
+
+<!-- Donation Instructions -->
+<div style="color: hotpink; text-align: center; margin-top: 20px;">
+  <p style="font-size: 18px;">⭑ ZELLE ⭑</p>
+  <p class="copy-link" onclick="copyToClipboard('tessandriley@gmail.com')">tessandriley@gmail.com</p>
+
+  <p style="font-size: 18px; margin-top: 20px;">⭑ VENMO ⭑</p>
+  <p class="copy-link" onclick="copyToClipboard('@THGINYC')">@THGINYC</p>
+
+  <p style="font-size: 18px; margin-top: 20px;">⭑ PAYPAL ⭑</p>
+  <p class="copy-link" onclick="copyToClipboard('tessandriley@gmail.com')">tessandriley@gmail.com</p>
+</div>
+
+<script>
+  function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+      alert(`Copied to clipboard: ${text}`);
+    }, () => {
+      alert('Failed to copy text.');
+    });
+  } // Handle tooltip click
+  document.addEventListener("DOMContentLoaded", function () {
+    const tooltipTrigger = document.querySelector(".tooltip-text");
+    let tooltipBox = null;
+
+    tooltipTrigger.addEventListener("click", function (e) {
+      // Remove existing tooltip if it exists
+      if (tooltipBox) {
+        tooltipBox.remove();
+        tooltipBox = null;
+        return;
+      }
+
+      // Create tooltip element
+      tooltipBox = document.createElement("div");
+      tooltipBox.className = "tooltip-box";
+      tooltipBox.textContent = tooltipTrigger.getAttribute("data-tooltip");
+
+      document.body.appendChild(tooltipBox);
+
+      // Dismiss tooltip when clicking outside
+      document.addEventListener("click", function outsideClick(event) {
+        if (!tooltipBox.contains(event.target) && event.target !== tooltipTrigger) {
+          tooltipBox.remove();
+          tooltipBox = null;
+          document.removeEventListener("click", outsideClick);
+        }
+      });
+    });
+  });
+</script>
+
+<br><br>
+  <!-- Donate button styled as a header -->
+ <!-- <h1 class="yellow-header" style="text-decoration: underline; cursor: pointer; margin: 20px 0px;" onclick="window.open('https://airtable.com/appcCtkV1YLAynufP/shrgwli4YSm9DjWDP', '_blank')">VENMO: <br> @THGINYC</h1>
+
+  <br><br><br><br><br><br>
+
+ Home Button -->
+  <button class="yellow-button" style="margin: 20px auto 40px; display: block;" onclick="window.location.href='welcome.html'">
+    HOME
+  </button>
+
+</body>
  .yellow-header {
   color: yellow;
   font-family: "Press Start 2P", serif;

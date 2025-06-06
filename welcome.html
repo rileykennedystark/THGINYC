@@ -190,11 +190,9 @@
   <div class="main-wrapper">
 
 <script>
- document.addEventListener('DOMContentLoaded', function() {
-  if (window.innerWidth <= 768) {
-    window.scrollTo(0, 0); // Scroll to top on mobile
-  }
-});
+  document.addEventListener('DOMContentLoaded', function() {
+    window.scrollTo(0, document.body.scrollHeight);
+  });
 </script>
 
   <!-- today's date -->
