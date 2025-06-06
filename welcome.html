@@ -158,20 +158,23 @@
   }
 
   /* Disable marquee movement on mobile */
-  .banner marquee {
+  .banner {
     animation: none !important;
+    behavior: static !important;
     transform: none !important;
-    overflow: visible !important;
-    white-space: normal !important;
     display: block !important;
-    width: 100% !important;
+    white-space: normal !important;
+    overflow: visible !important;
     text-align: center !important;
   }
 
-  /* Make sparkles static on mobile */
+  /* Make sparkles stop moving */
   sparkly-text::part(sparkle) {
     animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
   }
+}
 
   /* Prevent footer overlap */
   footer {
