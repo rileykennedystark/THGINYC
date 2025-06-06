@@ -9,21 +9,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" /> <!-- Link to your CSS file -->
   <style>
-    @media (max-width: 768px) {
-      /* 1. No changes to sparkly-text header */
-    
-      /* 2. Big header/body text size tweak */
-      .about-text {
-        font-size: 18px !important;
-        width: 90% !important;
-        margin: 0 auto !important;
-        text-align: left !important;
-      }
-    
+   @media (max-width: 768px) {
+  .about-text {
+    font-size: 18px !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 16px !important;
+    text-align: left !important;
+    box-sizing: border-box;
+  }
       /* 3. Small body text: match width and alignment */
       .script-body {
         font-size: 14px !important;
-        width: 90% !important;
+        width: 100% !important;
         margin: 0 auto !important;
         text-align: left !important;
         line-height: 1.6em;
@@ -44,7 +43,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
         gap: 10px;
       }
@@ -91,16 +90,11 @@
   </div>
 <br><br>
  <!-- SMALL BODY TEXT (pink) WITH RIGHT-WRAPPED IMAGE -->
-<div class="script-body" style="color:rgb(254, 149, 201); hidden; max-width: 80%; margin: 0 auto;">
+<div class="script-body" style="color:rgb(254, 149, 201)">
   It is 1984.<br><br>
   Tess and Riley have let the world bend them over a table for all of their lives.<br><br>
-
-  <img src="icons/TR shoulders rocket.jpeg" alt="Rabbi Adelstein" style="float: right; width: 33%; margin-left: 20px; margin-bottom: 20px; border: 3px solid #E040D0; border-radius: 8px;" />
-
-  A series of unfortunate events sends the girls spiraling straight to rock bottom, forcing them face to face with reality for the first time in their lives, deep in the pits of being in terrible, terrible debt to the tax man. <br><br> A stroke of grace leads them to the office of Rabbi Adelstein, a wise Bostonian lesbian, who asks the girls to consider whether they’d like to remain asleep at the wheel.<br><br>
-
-  No, say the girls. We’d like to fuck back.<br><br>
-
+  <img src="icons/TR shoulders rocket.jpeg" alt="Rabbi Adelstein" style="float: right; width: 32%; margin: 10px 5% 20px 30px; border: 3px solid #E040D0; border-radius: 8px;" />
+  A series of unfortunate events sends the girls spiraling straight to rock bottom. <br><br>But a stroke of grace leads them to the office of Rabbi Adelstein, a wise Bostonian lesbian, who asks the girls to consider whether they’d like to remain asleep at the wheel.<br><br>No, say the girls. We’d like to fuck back.<br><br>
   This is the story of the Horniest Girls in New York City, and their quest for world domination.
 </div>
 <br><br>
@@ -160,7 +154,7 @@
 </div>
 
   <!-- FOOTER -->
-  <div class="tiny-copyright"">
+  <div class="tiny-copyright">
     © 2025 TOONIEROONIE PRODUCTIONS. ALL RIGHTS RESERVED TO RILEY STARK AND TESS LANCASTER. TESSANDRILEY@GMAIL.COM.
   </div>
 
