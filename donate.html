@@ -10,18 +10,16 @@
 
 /* Disable marquee animation on mobile */
 @media (max-width: 768px) {
+  .marquee,
   .marquee__content {
     animation: none !important;
     transform: none !important;
-    white-space: nowrap;
-    display: inline-block;
+    overflow: visible !important;
+    white-space: normal !important;
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
   }
-
-  .marquee {
-    overflow: hidden;
-    text-align: center;
-  }
-}
 }
  .yellow-header {
   color: yellow;
@@ -57,6 +55,7 @@
   text-shadow: none;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
   </style>
 </head>
 
@@ -163,7 +162,7 @@ $5,500 - Fly our entire team to Scotland and back.">
 
   <br><br><br><br><br><br>
 
-  <!-- Home Button -->
+ Home Button -->
   <button class="yellow-button" style="margin: 20px auto 40px; display: block;" onclick="window.location.href='welcome.html'">
     HOME
   </button>
