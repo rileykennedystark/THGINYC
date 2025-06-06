@@ -198,10 +198,7 @@ header {
 }
 
 .tiny-copyright {
-  position: fixed;
   box-sizing: border-box;
-  bottom: 0;
-  left: 0;
   width: 100%;
   font-size: 8px;
   color: white;
@@ -209,7 +206,6 @@ header {
   line-height: 16px;
   padding: 20px 15px;
   font-family: "Press Start 2P", sans-serif;
-  z-index: 1000;
 }
 
 .about-text {
