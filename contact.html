@@ -9,16 +9,14 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="underbelly-body">
-
+<body class="underbelly-body" style="margin: 0; padding: 20px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; width: 100vw;">
 
   <!-- Main content -->
-
-  <h1 class="yellow-header" style="margin: 20px 0px;">EMAIL US.</h1>
+  <h1 class="yellow-header" style="margin: 20px 0px; text-align: center;">EMAIL US.</h1>
 
   <div 
     class="about-text" 
-    style="font-size: 24px; color: hotpink; width: 80%; max-width: none; text-align: center; cursor: pointer;" 
+    style="font-size: 24px; color: hotpink; width: 100%; max-width: 360px; text-align: center; cursor: pointer;" 
     onclick="copyEmail()"
     title="Click to copy"
   >
@@ -27,7 +25,7 @@
     <span id="copy-confirmation" style="display: none; font-size: 12px; color: yellow;">Copied to clipboard!</span>
   </div>
   
-  <button class="yellow-button" onclick="window.location.href='welcome.html'">HOME</button>
+  <button class="yellow-button" style="margin-top: 30px;" onclick="window.location.href='welcome.html'">HOME</button>
   
   <script>
     function copyEmail() {
@@ -42,4 +40,5 @@
     }
   </script>
 </body>
+
 </html>
