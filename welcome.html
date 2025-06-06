@@ -15,6 +15,8 @@
   padding: 60px 0;
 }
 
+
+
 .icon-row {
   display: flex; /* Ensures icons are arranged in a horizontal row */
   justify-content: center; /* Centers the icons */
@@ -94,21 +96,72 @@
   margin-top: 80px;
 }
 
+/* Universal tweaks for smaller scaling on mobile */
 @media (max-width: 768px) {
-  .icon-row {
-    flex-direction: column;
-    align-items: center;
+  body {
+    font-size: 12px;
   }
 
+  .icon-image {
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon-label {
+    font-size: 12px;
+  }
+
+  /* Main row stays horizontal on mobile */
+  .icon-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  /* Move scattered icons into vertical layout below row */
   .icon-cluster,
-  .audio-player,
   .icon-bottom-left,
   .icon-bottom-right,
   .icon-bottom-center {
     position: static;
-    transform: none;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
   }
+
+  /* Reposition "Support Our Play" next to Dictionary */
+  .icon-center-top,
+  .audio-player {
+    position: static;
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 10px;
+    text-align: center;
+  }
+
+  .icon-center-top + .audio-player {
+    margin-left: 10px;
+  }
+
+  /* Wrap dictionary + support icons in flex */
+  .icon-header-top-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* Disable marquee on mobile */
+  .banner marquee {
+    display: none;
+  }
+
+  /* Optional: Hide sparkly-text or turn off animation */
+  sparkly-text {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+}
 }
   </style>
 </head>
@@ -213,12 +266,13 @@
   </div>
 
      <!-- Scattered Icons -->
-     <div class="icon-center-top">
-      <a href="dictionary.html">
-        <img src="icons/DICTIONARY ICON.png" alt="Dictionary" class="icon-image">
-      </a>
-      <div class="icon-label">DICTIONARY</div>
-    </div>
+     <div class="icon-header-top-wrapper">
+      <div class="icon-center-top">
+        <a href="dictionary.html">
+          <img src="icons/DICTIONARY ICON.png" alt="Dictionary" class="icon-image">
+        </a>
+        <div class="icon-label">DICTIONARY</div>
+      </div>
 
     <div class="audio-player " style="margin-bottom: 30px;" onclick="window.location.href='donate.html'">
       <a href="#BUDGETß">
