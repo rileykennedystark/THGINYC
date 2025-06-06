@@ -7,8 +7,6 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
-
-/* Disable marquee animation on mobile */
  .yellow-header {
   color: yellow;
   font-family: "Press Start 2P", serif;
@@ -43,7 +41,9 @@
   text-shadow: none;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-
+.hide-on-scroll {
+  display: none !important;
+}
 
   </style>
 </head>
@@ -51,7 +51,7 @@
 <body class="donate" style="padding-top: 100px;">
 
   <!-- Marquee -->
-  <div class="banner" style="background-color: yellow;">
+  <div id="marquee-banner" class="banner" style="background-color: yellow;">
     <div class="marquee">
       <span class="marquee__content">
         SUPPORT OUR PLAY SUPPORT OUR PLAY SUPPORT OUR PLAY SUPPORT OUR PLAY SUPPORT OUR PLAY SUPPORT OUR PLAY SUPPORT OUR PLAY SUPPORT OUR PLAY SUPPORT OUR PLAY SUPPORT OUR PLAY 
@@ -97,13 +97,14 @@ $5,500 - Fly our entire team to Scotland and back.">
 <!-- Donation Instructions -->
 <div style="color: hotpink; text-align: center; margin-top: 20px;">
   <p style="font-size: 18px;">⭑ ZELLE ⭑</p>
-  <p class="copy-link" onclick="copyToClipboard('tessandriley@gmail.com')">tessandriley@gmail.com</p>
+  <p class="copy-link" onclick="copyToClipboard('tessandriley@gmail.com')">tessandriley@gmail.com</p><br>
 
   <p style="font-size: 18px; margin-top: 20px;">⭑ VENMO ⭑</p>
-  <p class="copy-link" onclick="copyToClipboard('@THGINYC')">@THGINYC</p>
+  <p class="copy-link" onclick="copyToClipboard('@THGINYC')">@THGINYC</p><br>
 
-  <p style="font-size: 18px; margin-top: 20px;">⭑ PAYPAL ⭑</p>
-  <p class="copy-link" onclick="copyToClipboard('tessandriley@gmail.com')">tessandriley@gmail.com</p>
+  <p style="font-size: 18px; margin-top: 20px;">⭑ FRACTURED ATLAS ⭑
+    <p style ="font-size: 10px; margin-top: -10px ">⭑ (FISCAL SPONSOR, TAX DEDUCTIBLE) ⭑</p>
+  <p class="copy-link" onclick="copyToClipboard('https://fundraising.fracturedatlas.org/the-horniest-girls-in-new-york-city-are-going-to-the-edinburgh-fringe-festival')">TAX DEDUCTIBLE DONATION PAGE</p>
 </div>
 
 <script>
@@ -142,6 +143,16 @@ $5,500 - Fly our entire team to Scotland and back.">
         }
       });
     });
+  });
+</script>
+<script>
+  window.addEventListener("scroll", function () {
+    const banner = document.getElementById("marquee-banner");
+    if (window.scrollY > 20) {
+      banner.classList.add("hide-on-scroll");
+    } else {
+      banner.classList.remove("hide-on-scroll");
+    }
   });
 </script>
 
