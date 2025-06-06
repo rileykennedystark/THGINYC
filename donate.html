@@ -7,6 +7,14 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
+
+/* Disable marquee on mobile */
+@media (max-width: 768px) {
+  .marquee__content {
+    animation: none;
+    transform: none;
+  }
+}
  .yellow-header {
   color: yellow;
   font-family: "Press Start 2P", serif;
@@ -21,8 +29,7 @@
   cursor: pointer;
 }
   
-    .tooltip-text[data-tooltip]:hover::after {
-  content: attr(data-tooltip);
+.tooltip-box {
   position: fixed;
   top: 50%;
   right: 40px;
@@ -39,9 +46,8 @@
   word-break: break-word;
   overflow-wrap: break-word;
   font-family: sans-serif;
-  text-shadow: none; /* ✅ This removes the pink glow */
+  text-shadow: none;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  pointer-events: none;
 }
   </style>
 </head>
@@ -52,7 +58,7 @@
   <div class="banner" style="background-color: yellow;">
     <div class="marquee">
       <span class="marquee__content">
-        SUPPORT OUR PLAY SUPPORT OUR PLAY SUPPORT OUR PLAY SUPPORT OUR PLAY SUPPORT OUR PLAY SUPPORT OUR PLAY SUPPORT OUR PLAY SUPPORT OUR PLAY SUPPORT OUR PLAY 
+        SUPPORT OUR PLAY SUPPORT OUR PLAY SUPPORT OUR PLAY SUPPORT OUR PLAY SUPPORT OUR PLAY SUPPORT OUR PLAY SUPPORT OUR PLAY SUPPORT OUR PLAY SUPPORT OUR PLAY SUPPORT OUR PLAY 
       </span>
     </div>
   </div>
@@ -85,6 +91,9 @@ $1,176 - Fringe Festival Venue Deposit.
 $5,500 - Fly our entire team to Scotland and back.">
   We will use your money very wisely.
 </h1>
+</h1>
+<p style="font-size: 10px; color: hotpink; margin-top: -10px;">(click to see how)</p>
+</div>
 
 <!-- NEW SUPPORT HEADER -->
 <h1 class="yellow-header" style="margin-top: 40px;">SUPPORT OUR PLAY:</h1>
@@ -108,7 +117,36 @@ $5,500 - Fly our entire team to Scotland and back.">
     }, () => {
       alert('Failed to copy text.');
     });
-  }
+  } // Handle tooltip click
+  document.addEventListener("DOMContentLoaded", function () {
+    const tooltipTrigger = document.querySelector(".tooltip-text");
+    let tooltipBox = null;
+
+    tooltipTrigger.addEventListener("click", function (e) {
+      // Remove existing tooltip if it exists
+      if (tooltipBox) {
+        tooltipBox.remove();
+        tooltipBox = null;
+        return;
+      }
+
+      // Create tooltip element
+      tooltipBox = document.createElement("div");
+      tooltipBox.className = "tooltip-box";
+      tooltipBox.textContent = tooltipTrigger.getAttribute("data-tooltip");
+
+      document.body.appendChild(tooltipBox);
+
+      // Dismiss tooltip when clicking outside
+      document.addEventListener("click", function outsideClick(event) {
+        if (!tooltipBox.contains(event.target) && event.target !== tooltipTrigger) {
+          tooltipBox.remove();
+          tooltipBox = null;
+          document.removeEventListener("click", outsideClick);
+        }
+      });
+    });
+  });
 </script>
 
 <br><br>
