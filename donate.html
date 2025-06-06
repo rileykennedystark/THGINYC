@@ -8,12 +8,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
 
-/* Disable marquee on mobile */
+/* Disable marquee animation on mobile */
 @media (max-width: 768px) {
   .marquee__content {
-    animation: none;
-    transform: none;
+    animation: none !important;
+    transform: none !important;
+    white-space: nowrap;
+    display: inline-block;
   }
+
+  .marquee {
+    overflow: hidden;
+    text-align: center;
+  }
+}
 }
  .yellow-header {
   color: yellow;
