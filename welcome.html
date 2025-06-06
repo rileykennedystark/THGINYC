@@ -157,17 +157,20 @@
     margin: 40px 0 20px 0;
   }
 
-  /* Marquee stops moving but text stays visible */
+  /* Disable marquee movement on mobile */
   .banner marquee {
     animation: none !important;
     transform: none !important;
-    white-space: nowrap;
-    overflow: hidden;
+    overflow: visible !important;
+    white-space: normal !important;
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
   }
 
-  /* Sparkle slows down */
+  /* Make sparkles static on mobile */
   sparkly-text::part(sparkle) {
-    animation-duration: 8s !important;
+    animation: none !important;
   }
 
   /* Prevent footer overlap */
