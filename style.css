@@ -519,7 +519,7 @@ TEAM
   MOBILE
 ************************************************************/
 
-@media (max-width: 600px) {
+@media (max-width: 600px) 
 
 
     .row {
@@ -634,6 +634,28 @@ TEAM
     text-align: center;
     font-size: 12px;
   }
+ 
+    /* Disable marquee animation entirely */
+    .marquee {
+      animation: none !important;
+      transform: none !important;
+    }
+  
+    /* Force the text inside marquee to stop behaving like a scrolling banner */
+    .marquee__content {
+      display: block !important;
+      white-space: normal !important;
+      overflow: visible !important;
+      animation: none !important;
+      transform: none !important;
+      text-align: center;
+    }
+  
+    /* Freeze sparkles on sparkly-text component */
+    sparkly-text::part(sparkle) {
+      animation: none !important;
+      display: inline-block;
+    }
 
   @keyframes marquee {
     0% {
@@ -642,4 +664,7 @@ TEAM
 
     100% {
       transform: translateX(-80%);
+    }
+
+  
     }
